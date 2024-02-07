@@ -20,7 +20,6 @@ public interface UserRole {
     void screens();
 
     @EntityAttributePolicy(entityClass = Employee.class, attributes = {"*"}, action = EntityAttributePolicyAction.MODIFY)
-//    @EntityAttributePolicy(entityClass = Employee.class, attributes = {"firstName", "lastName", "email", "birthDate", "department", "id", "*"}, action = EntityAttributePolicyAction.MODIFY)
     @EntityPolicy(entityClass = Employee.class, actions = {EntityPolicyAction.READ, EntityPolicyAction.UPDATE, EntityPolicyAction.DELETE})
     void employee();
 
